@@ -112,6 +112,7 @@ void MainTray::flush() {
                 cl->name_ = command->name_;
                 cl->autostart_ = command->autostart_;
                 cl->path_ = command->path_;
+                flush();
             });
         });
         connect(stopAction, &QAction::triggered, [this, c](){
